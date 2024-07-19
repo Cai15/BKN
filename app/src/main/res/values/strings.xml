@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">КнижОнки</string>
+    <string name="Menu">МЕНЮ</string>
+    <string name="Izbran">ИЗБРАННОЕ</string>
+    <string name="Pozze">ПОСМОТРЕТЬ ПОЗЖЕ</string>
+    <string name="Podborki">ПОДБОРКИ</string>
+    <string name="Settings">НАСТРОЙКИ</string>
+    <string name="todo">TODO</string>
+    <string name="title_activity_details">DetailsActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_favorites_title_text">Избранное</string>
+    <string name="menu_watch_later_title_text">Отложенное</string>
+    <string name="menu_selections_title_text">Подборки</string>
+    <string name="menu_home_title_text">Главная</string>
+</resources>
