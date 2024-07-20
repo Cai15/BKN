@@ -1,0 +1,48 @@
+
+  "project_info": {
+    "project_number": "12071607",
+    "project_id": "myfilsms",
+    "storage_bucket": "myfilsms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12071607:android:0e9a594ddbd543186a1332",
+        "android_client_info": {
+          "package_name": "com.example.bkn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpWAMBcCQTkOw-4avXBYYLmyrpZ1pgpGo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12071607:android:ae779d28dbd8d3b16a1332",
+        "android_client_info": {
+          "package_name": "com.example.myfilsms.basic"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpWAMBcCQTkOw-4avXBYYLmyrpZ1pgpGo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
