@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-parcelize")
     id("kotlin-kapt")
+    alias(libs.plugins.google.gms.google.services)
+    alias(libs.plugins.google.firebase.crashlytics)
 }
 
 android {
@@ -78,6 +80,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.material3)
     implementation(libs.support.annotations)
+    implementation(libs.firebase.crashlytics)
     //implementation("androidx.annotation:annotation:1.7.1")
     annotationProcessor(libs.androidx.room.compiler.processing.testing)
     testImplementation(libs.junit)

@@ -1,6 +1,7 @@
 package com.example.bkn.view.rv_adapters
 
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -51,6 +52,7 @@ class BookListRecyclerAdapter(private val clickListener: OnItemClickListener) :
     //Метод для добавления объектов в наш список
 
 
+    @SuppressLint("NotifyDataSetChanged")
     fun addItems(list: List<Book>) {
         //Сначала очишаем(если не реализовать DiffUtils)
         items.clear()

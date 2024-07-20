@@ -8,7 +8,7 @@ import retrofit2.http.Query
 
 
 interface TmdbApi {
-    @GET("3/movie/popular")
+    @GET("api.bigbookapi.com/search-books")
     fun getBooks(
         @Query("api_key") apiKey: String,
         @Query("language") language: String,

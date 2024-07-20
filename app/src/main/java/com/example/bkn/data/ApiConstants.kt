@@ -1,7 +1,7 @@
 package com.example.bkn.data
 
 object ApiConstants {
-    const val BASE_URL = "https://api.themoviedb.org/"
-    const val IMAGES_URL = "https://image.tmdb.org/t/p/"
+    const val BASE_URL = "https://api.bigbookapi.com/"
+    const val IMAGES_URL = ""
 
 }
