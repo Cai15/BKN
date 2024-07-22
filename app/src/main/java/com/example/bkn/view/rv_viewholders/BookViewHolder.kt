@@ -8,7 +8,7 @@ import com.example.bkn.domain.Book
 
 
 //В конструктор класс передается layout, который мы создали(Book_item.xml)
-class BookViewHolder(private var binding: BookItemBinding) : RecyclerView.ViewHolder(binding.root) {
+class BookViewHolder(binding: BookItemBinding) : RecyclerView.ViewHolder(binding.root) {
     //Привязываем view из layout к переменным
     private val title = binding.title
     private val poster = binding.poster

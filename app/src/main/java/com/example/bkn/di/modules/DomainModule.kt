@@ -13,6 +13,6 @@ class DomainModule {
     @Singleton
     @Provides
     fun provideInteractor(repository: MainRepository, tmdbApi: TmdbApi) =
-        Interactor(response = repository, retrofitService = tmdbApi)
+        Interactor(retrofitService = tmdbApi)
 
 }

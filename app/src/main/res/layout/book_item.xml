@@ -21,6 +21,7 @@
             <ImageView
                 android:id="@+id/poster"
                 android:layout_width="150dp"
+                android:importantForAccessibility="no"
                 android:scaleType="centerCrop"
                 android:layout_height="match_parent"
                 app:layout_constraintLeft_toLeftOf="parent"
