@@ -19,13 +19,4 @@ class WatchLaterFragment : Fragment() {
         binding = FragmentWatchLaterBinding.inflate(inflater, container, false)
         return binding.root
     }
-
-   /* override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        AnimationHelper.performFragmentCircularRevealAnimation(
-            binding.watchLaterFragmentRoot,
-            requireActivity(),
-            3
-        )
-    }*/
 }
