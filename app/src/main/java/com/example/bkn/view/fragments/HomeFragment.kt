@@ -11,7 +11,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bkn.databinding.FragmentHomeBinding
 import com.example.bkn.domain.Book
-import com.example.bkn.utils.AnimationHelper
 import com.example.bkn.view.MainActivity
 import com.example.bkn.view.rv_adapters.BookListRecyclerAdapter
 import com.example.bkn.view.rv_adapters.TopSpacingItemDecoration
@@ -53,12 +52,6 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        AnimationHelper.performFragmentCircularRevealAnimation(
-            binding.homeFragmentRoot,
-            requireActivity(),
-            1
-        )
 
         binding.searchView.setOnClickListener {
             binding.searchView.isIconified = false

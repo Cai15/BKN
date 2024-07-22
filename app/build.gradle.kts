@@ -109,7 +109,7 @@ dependencies {
 
     //Glide
     implementation (libs.glide)
-    //annotationProcessor ("com.github.bump tech.glide:compiler:4.11.0")
+    annotationProcessor (libs.compiler)
 
     implementation (libs.lottie.v630)
 
