@@ -13,7 +13,7 @@ class BookViewHolder(private var binding: BookItemBinding) : RecyclerView.ViewHo
     private val title = binding.title
     private val poster = binding.poster
     private val description = binding.description
-    private val ratingDonut = binding.ratingDonut
+   // private val ratingDonut = binding.ratingDonut
 
     //В этом методе кладем данные из Book в наши view
     fun bind(Book: Book) {
@@ -31,6 +31,6 @@ class BookViewHolder(private var binding: BookItemBinding) : RecyclerView.ViewHo
         //Устанавливаем описание
         description.text = Book.description
         //Устанавливаем рэйтинг
-        ratingDonut.setProgress((Book.rating * 10).toInt())
+        //ratingDonut.setProgress((Book.rating * 10).toInt())
     }
 }

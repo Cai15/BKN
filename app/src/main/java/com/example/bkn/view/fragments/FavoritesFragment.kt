@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bkn.R
 import com.example.bkn.databinding.FragmentFavoritesBinding
 import com.example.bkn.domain.Book
-import com.example.bkn.utils.AnimationHelper
+//import com.example.bkn.utils.AnimationHelper
 import com.example.bkn.view.MainActivity
 import com.example.bkn.view.rv_adapters.BookListRecyclerAdapter
 import com.example.bkn.view.rv_adapters.TopSpacingItemDecoration
@@ -32,11 +32,11 @@ class FavoritesFragment : Fragment(R.layout.fragment_favorites) {
         //Получаем список при транзакции фрагмента
         val favoritesList: List<Book> = emptyList()
 
-        AnimationHelper.performFragmentCircularRevealAnimation(
+        /*AnimationHelper.performFragmentCircularRevealAnimation(
             binding.favoritesFragmentRoot,
             requireActivity(),
             2
-        )
+        )*/
 
         binding.favoritesRecycler.apply {
             BooksAdapter =
