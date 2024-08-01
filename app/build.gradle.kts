@@ -128,7 +128,7 @@ dependencies {
 
     //Room
     implementation (libs.androidx.room.runtime) // Библиотека "Room"
-    //kapt (libs.androidx.room.compiler) // Кодогенератор
+    kapt (libs.androidx.room.compiler) // Кодогенератор
     implementation (libs.androidx.room.ktx) // Дополнительно для Kotlin Coroutines, Kotlin Flows
 
     //Adding Swipe Refresh Layout Dependency
