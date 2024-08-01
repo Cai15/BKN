@@ -5,17 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="150dp">
 
-    <com.example.bkn.view.customviews.RatingDonutView
-        android:id="@+id/rating_donut"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:translationZ="11dp"
-        app:stroke="10"
-        app:progress="77"
-        android:layout_gravity="bottom|left"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -32,6 +21,7 @@
             <ImageView
                 android:id="@+id/poster"
                 android:layout_width="150dp"
+                android:importantForAccessibility="no"
                 android:scaleType="centerCrop"
                 android:layout_height="match_parent"
                 app:layout_constraintLeft_toLeftOf="parent"

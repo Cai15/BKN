@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide
 import com.example.bkn.R
 import com.example.bkn.data.ApiConstants
 import com.example.bkn.databinding.FragmentDetailsBinding
-import com.example.bkn.domain.Book
+import com.example.bkn.data.Enity.Book
 
 
 class DetailsFragment : Fragment(R.layout.fragment_details) {
@@ -58,7 +58,7 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
     }
 
     private fun setBooksDetails() {
-        //Получаем наш фильм из переданного бандлацц
+        //Получаем нашу книгу из переданного бандлацц
         Book = arguments?.get("Book") as Book
 
         //Устанавливаем заголовок
