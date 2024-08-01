@@ -23,13 +23,13 @@ class HomeFragmentViewModel : ViewModel() {
 
     fun getFilms() {
         interactor.getBooksFromApi(1, object : ApiCallback {
-            override fun onSuccess(films: List<Book>) {
-                booksListLiveData.postValue(films)
+            override fun onSuccess(books: List<Book>) {
+                booksListLiveData.postValue(books)
             }
 
             override fun onFailure() {
                 Executors.newSingleThreadExecutor().execute {
-                    booksListLiveData.postValue(interactor.getFilmsFromDB())
+                    booksListLiveData.postValue(interactor.getBooksFromDB())
                 }
             }
         })

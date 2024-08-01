@@ -30,7 +30,5 @@ class BookViewHolder(binding: BookItemBinding) : RecyclerView.ViewHolder(binding
             .into(poster)
         //Устанавливаем описание
         description.text = Book.description
-        //Устанавливаем рэйтинг
-        //ratingDonut.setProgress((Book.rating * 10).toInt())
     }
 }

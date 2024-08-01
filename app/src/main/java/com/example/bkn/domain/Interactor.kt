@@ -39,5 +39,5 @@ class Interactor(private val repo: MainRepository, private val retrofitService: 
     //Метод для получения настроек
     fun getDefaultCategoryFromPreferences() = preferences.geDefaultCategory()
 
-    fun getFilmsFromDB(): List<Book> = repo.getAllFromDB()
+    fun getBooksFromDB(): List<Book> = repo.getAllFromDB()
 }

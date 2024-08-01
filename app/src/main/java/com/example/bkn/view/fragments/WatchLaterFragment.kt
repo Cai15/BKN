@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.bkn.databinding.FragmentWatchLaterBinding
-//import com.example.bkn.utils.AnimationHelper
+import com.example.bkn.utils.AnimationHelper
 
 
 class WatchLaterFragment : Fragment() {
@@ -18,5 +18,10 @@ class WatchLaterFragment : Fragment() {
     ): View? {
         binding = FragmentWatchLaterBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        AnimationHelper.performFragmentCircularRevealAnimation(binding.watchLaterFragmentRoot, requireActivity(), 3)
     }
 }
