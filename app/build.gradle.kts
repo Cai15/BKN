@@ -3,8 +3,8 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-parcelize")
     id("kotlin-kapt")
-    alias(libs.plugins.google.gms.google.services)
-    alias(libs.plugins.google.firebase.crashlytics)
+    //alias(libs.plugins.google.gms.google.services)
+    //alias(libs.plugins.google.firebase.crashlytics)
 }
 
 android {
@@ -60,8 +60,6 @@ android {
         prefab = true
     }
     composeOptions {
-        // kotlinCompilerExtensionVersion = "1.6.3"
-        //kotlinCompilerVersion = "1.5.3"
         kotlinCompilerExtensionVersion =  "1.5.0"
     }
     packaging {
@@ -81,7 +79,6 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.support.annotations)
     implementation(libs.firebase.crashlytics)
-    //implementation("androidx.annotation:annotation:1.7.1")
     annotationProcessor(libs.androidx.room.compiler.processing.testing)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit.v115)
@@ -128,4 +125,13 @@ dependencies {
     implementation (libs.dagger.android.support)
     kapt (libs.dagger.compiler.v250)
     kapt (libs.dagger.android.processor)
+
+    //Room
+    implementation (libs.androidx.room.runtime) // Библиотека "Room"
+    //kapt (libs.androidx.room.compiler) // Кодогенератор
+    implementation (libs.androidx.room.ktx) // Дополнительно для Kotlin Coroutines, Kotlin Flows
+
+    //Adding Swipe Refresh Layout Dependency
+    implementation (libs.androidx.swiperefreshlayout)
+
 }

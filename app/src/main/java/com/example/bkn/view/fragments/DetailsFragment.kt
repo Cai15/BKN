@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide
 import com.example.bkn.R
 import com.example.bkn.data.ApiConstants
 import com.example.bkn.databinding.FragmentDetailsBinding
-import com.example.bkn.domain.Book
+import com.example.bkn.data.Enity.Book
 
 
 class DetailsFragment : Fragment(R.layout.fragment_details) {

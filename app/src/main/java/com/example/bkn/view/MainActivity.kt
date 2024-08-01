@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.bkn.R
 import com.example.bkn.databinding.ActivityMainBinding
-import com.example.bkn.domain.Book
+import com.example.bkn.data.Enity.Book
 import com.example.bkn.view.fragments.DetailsFragment
 import com.example.bkn.view.fragments.FavoritesFragment
 import com.example.bkn.view.fragments.HomeFragment

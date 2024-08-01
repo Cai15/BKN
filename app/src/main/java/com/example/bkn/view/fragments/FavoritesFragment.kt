@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bkn.R
 import com.example.bkn.databinding.FragmentFavoritesBinding
-import com.example.bkn.domain.Book
+import com.example.bkn.data.Enity.Book
 import com.example.bkn.view.MainActivity
 import com.example.bkn.view.rv_adapters.BookListRecyclerAdapter
 import com.example.bkn.view.rv_adapters.TopSpacingItemDecoration

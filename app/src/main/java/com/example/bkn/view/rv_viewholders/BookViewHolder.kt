@@ -4,7 +4,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.bkn.data.ApiConstants
 import com.example.bkn.databinding.BookItemBinding
-import com.example.bkn.domain.Book
+import com.example.bkn.data.Enity.Book
 
 
 //В конструктор класс передается layout, который мы создали(Book_item.xml)

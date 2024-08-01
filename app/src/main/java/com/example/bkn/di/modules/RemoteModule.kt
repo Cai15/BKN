@@ -10,6 +10,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.Headers
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
@@ -31,6 +32,7 @@ class RemoteModule {
 
     @Provides
     @Singleton
+    @Headers("Content-Type: application/json")
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit = Retrofit.Builder()
         //Указываем базовый URL из констант
         .baseUrl(ApiConstants.BASE_URL)
