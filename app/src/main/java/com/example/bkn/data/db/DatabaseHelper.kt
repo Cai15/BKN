@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper
 
 class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
     override fun onCreate(db: SQLiteDatabase?) {
-        //Создаем саму таблицу для фильмов
+        //Создаем саму таблицу для книг
         db?.execSQL(
             "CREATE TABLE $TABLE_NAME (" +
                     "$COLUMN_ID INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -22,13 +22,13 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
 
     companion object {
         //Название самой БД
-        private const val DATABASE_NAME = "films.db"
+        private const val DATABASE_NAME = "books.db"
         //Версия БД
         private const val DATABASE_VERSION = 1
 
         //Константы для работы с таблицей, они на понабатся в CRUD операциях и,
         //возможно, в составлении запросов
-        const val TABLE_NAME = "films_table"
+        const val TABLE_NAME = "books_table"
         const val COLUMN_ID = "id"
         const val COLUMN_TITLE = "title"
         const val COLUMN_POSTER = "poster_path"

@@ -9,7 +9,7 @@ import retrofit2.http.Query
 
 
 interface TmdbApi {
-    @GET("api.bigbookapi.com/search-books")
+    @GET("https://api.bigbookapi.com/search-books")
     fun getBooks(
         @Path("category") category: String,
         @Query("api_key") apiKey: String,

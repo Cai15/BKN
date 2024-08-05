@@ -64,6 +64,6 @@ class BookListRecyclerAdapter(private val clickListener: OnItemClickListener) :
 
     //Интерфейс для обработки кликов
     interface OnItemClickListener {
-        fun click(Book: Book)
+        fun click(book: Book)
     }
 }

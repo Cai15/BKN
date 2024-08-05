@@ -11,7 +11,7 @@ import com.example.bkn.data.Enity.Book
 interface BookDao {
     //Запрос на всю таблицу
     @Query("SELECT * FROM cached_books")
-    fun getCachedFilms(): List<Book>
+    fun getCachedBooks(): List<Book>
 
     //Кладем списком в БД, в случае конфликта, перезаписываем
     @Insert(onConflict = OnConflictStrategy.REPLACE)

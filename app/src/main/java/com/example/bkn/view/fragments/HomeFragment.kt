@@ -20,7 +20,7 @@ import java.util.Locale
 
 
 class HomeFragment : Fragment() {
-    private val viewModel by lazy {
+        private val viewModel by lazy {
         ViewModelProvider.NewInstanceFactory().create(HomeFragmentViewModel::class.java)
     }
     private lateinit var booksAdapter: BookListRecyclerAdapter
@@ -72,7 +72,7 @@ class HomeFragment : Fragment() {
             //Чистим адаптер(items нужно будет сделать паблик или создать для этого публичный метод)
             booksAdapter.items.clear()
             //Делаем новый запрос фильмов на сервер
-            viewModel.getFilms()
+            viewModel.getBooks()
             //Убираем крутящиеся колечко
             binding.pullToRefresh.isRefreshing = false
         }
@@ -113,8 +113,8 @@ class HomeFragment : Fragment() {
         binding.mainRecycler.apply {
             booksAdapter =
                 BookListRecyclerAdapter(object : BookListRecyclerAdapter.OnItemClickListener {
-                    override fun click(Book: Book) {
-                        (requireActivity() as MainActivity).launchDetailsFragment(Book)
+                    override fun click(book: Book) {
+                        (requireActivity() as MainActivity).launchDetailsFragment(book)
                     }
                 })
             //Присваиваем адаптер

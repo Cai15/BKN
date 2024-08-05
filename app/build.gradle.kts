@@ -3,8 +3,6 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-parcelize")
     id("kotlin-kapt")
-    //alias(libs.plugins.google.gms.google.services)
-    //alias(libs.plugins.google.firebase.crashlytics)
 }
 
 android {
@@ -27,6 +25,7 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        signingConfig = signingConfigs.getByName("debug")
 
     }
 
@@ -105,8 +104,8 @@ dependencies {
     implementation (libs.androidx.navigation.ui.ktx.v276)
 
     //Glide
-    implementation (libs.glide)
-    annotationProcessor (libs.compiler)
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
 
     implementation (libs.lottie.v630)
 
@@ -133,5 +132,7 @@ dependencies {
 
     //Adding Swipe Refresh Layout Dependency
     implementation (libs.androidx.swiperefreshlayout)
+
+
 
 }

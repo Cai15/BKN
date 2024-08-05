@@ -8,5 +8,5 @@ import com.example.bkn.data.Enity.Book
 
 @Database(entities = [Book::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun filmDao(): BookDao
+    abstract fun bookDao(): BookDao
 }

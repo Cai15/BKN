@@ -14,14 +14,14 @@ import javax.inject.Singleton
 class DatabaseModule {
     @Singleton
     @Provides
-    fun provideFilmDao(context: Context) =
+    fun provideBookDao(context: Context) =
         Room.databaseBuilder(
             context,
             AppDatabase::class.java,
-            "film_db"
-        ).build().filmDao()
+            "book_db"
+        ).build().bookDao()
 
     @Provides
     @Singleton
-    fun provideRepository(filmDao: BookDao) = MainRepository(filmDao)
+    fun provideRepository(bookDao: BookDao) = MainRepository(bookDao)
 }

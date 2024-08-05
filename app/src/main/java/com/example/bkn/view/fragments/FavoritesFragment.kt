@@ -40,8 +40,8 @@ class FavoritesFragment : Fragment(R.layout.fragment_favorites) {
         binding.favoritesRecycler.apply {
             BooksAdapter =
                 BookListRecyclerAdapter(object : BookListRecyclerAdapter.OnItemClickListener {
-                    override fun click(Book: Book) {
-                        (requireActivity() as MainActivity).launchDetailsFragment(Book)
+                    override fun click(book: Book) {
+                        (requireActivity() as MainActivity).launchDetailsFragment(book)
                     }
                 })
             //Присваиваем адаптер

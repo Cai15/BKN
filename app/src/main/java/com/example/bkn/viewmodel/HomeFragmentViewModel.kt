@@ -18,10 +18,10 @@ class HomeFragmentViewModel : ViewModel() {
 
     init {
         App.instance.dagger.inject(this)
-        getFilms()
+        getBooks()
     }
 
-    fun getFilms() {
+    fun getBooks() {
         interactor.getBooksFromApi(1, object : ApiCallback {
             override fun onSuccess(books: List<Book>) {
                 booksListLiveData.postValue(books)
@@ -36,7 +36,7 @@ class HomeFragmentViewModel : ViewModel() {
     }
 
     interface ApiCallback {
-        fun onSuccess(Books: List<Book>)
+        fun onSuccess(books: List<Book>)
         fun onFailure()
     }
 }

@@ -14,12 +14,12 @@ import retrofit2.Response
 
 class Interactor(private val repo: MainRepository, private val retrofitService: TmdbApi, private val preferences: PreferenceProvider) {
     fun getBooksFromApi(page: Int, callback: HomeFragmentViewModel.ApiCallback) {
-        //Метод getDefaultCategoryFromPreferences() будет нам получать при каждом запросе нужный нам список фильмов
+        //Метод getDefaultCategoryFromPreferences() будет нам получать при каждом запросе нужный нам список книг
         retrofitService.getBooks(getDefaultCategoryFromPreferences(), API.KEY, "ru-RU", page).enqueue(object : Callback<TmdbResults> {
             override fun onResponse(call: Call<TmdbResults>, response: Response<TmdbResults>) {
-                //При успехе мы вызываем метод передаем onSuccess и в этот коллбэк список фильмов
+                //При успехе мы вызываем метод передаем onSuccess и в этот коллбэк список книг
                 val list = Converter.convertApiListToDTOList(response.body()?.tmdbBooks)
-                //Кладем фильмы в бд
+                //Кладем книги в бд
                 list.forEach {
                     repo.putToDb(list)
                 }
