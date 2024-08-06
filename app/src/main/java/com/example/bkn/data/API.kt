@@ -2,5 +2,5 @@ package com.example.bkn.data
 
 
 object API {
-    val KEY: String = "f2962f3654914973846067ff5cb2a64f"
+    val KEY: String = "5f362660f3850a959778712ba002c2f7"
 }

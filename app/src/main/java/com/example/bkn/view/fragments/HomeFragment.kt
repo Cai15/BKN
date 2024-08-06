@@ -71,7 +71,7 @@ class HomeFragment : Fragment() {
         binding.pullToRefresh.setOnRefreshListener {
             //Чистим адаптер(items нужно будет сделать паблик или создать для этого публичный метод)
             booksAdapter.items.clear()
-            //Делаем новый запрос фильмов на сервер
+            //Делаем новый запрос книг на сервер
             viewModel.getBooks()
             //Убираем крутящиеся колечко
             binding.pullToRefresh.isRefreshing = false
