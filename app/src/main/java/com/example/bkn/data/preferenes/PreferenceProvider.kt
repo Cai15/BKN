@@ -7,7 +7,7 @@ import androidx.core.content.edit
 class PreferenceProvider(context: Context) {
     //Нам нужен контекст приложения
     private val appContext = context.applicationContext
-    //Создаем экземпляр SharedPreferences
+    //Создаем экземпляр SharedPreferences.
     private val preference: SharedPreferences = appContext.getSharedPreferences("settings", Context.MODE_PRIVATE)
 
     init {
@@ -24,7 +24,7 @@ class PreferenceProvider(context: Context) {
     fun saveDefaultCategory(category: String) {
         preference.edit { putString(KEY_DEFAULT_CATEGORY, category) }
     }
-    //Забираем категорию
+    //Забираем категорию.
     fun geDefaultCategory(): String {
         return preference.getString(KEY_DEFAULT_CATEGORY, DEFAULT_CATEGORY) ?: DEFAULT_CATEGORY
     }
