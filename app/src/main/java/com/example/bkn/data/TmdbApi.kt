@@ -14,6 +14,6 @@ interface TmdbApi {
         @Path("category") category: String,
         @Query("api_key") apiKey: String,
         @Query("language") language: String,
-        @Query("page") page: Int
+       // @Query("page") page: Int
     ): Call<TmdbResults>
 }
