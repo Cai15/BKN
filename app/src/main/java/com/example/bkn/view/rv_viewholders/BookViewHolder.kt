@@ -4,16 +4,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.bkn.data.ApiConstants
 import com.example.bkn.databinding.BookItemBinding
-import com.example.bkn.domain.Book
+import com.example.bkn.data.Enity.Book
 
 
 //В конструктор класс передается layout, который мы создали(Book_item.xml)
-class BookViewHolder(private var binding: BookItemBinding) : RecyclerView.ViewHolder(binding.root) {
+class BookViewHolder(binding: BookItemBinding) : RecyclerView.ViewHolder(binding.root) {
     //Привязываем view из layout к переменным
     private val title = binding.title
     private val poster = binding.poster
     private val description = binding.description
-    private val ratingDonut = binding.ratingDonut
+   // private val ratingDonut = binding.ratingDonut
 
     //В этом методе кладем данные из Book в наши view
     fun bind(Book: Book) {
@@ -30,7 +30,5 @@ class BookViewHolder(private var binding: BookItemBinding) : RecyclerView.ViewHo
             .into(poster)
         //Устанавливаем описание
         description.text = Book.description
-        //Устанавливаем рэйтинг
-        ratingDonut.setProgress((Book.rating * 10).toInt())
     }
 }

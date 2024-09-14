@@ -1,7 +1,7 @@
 package com.example.bkn.utils
 
 import com.example.bkn.data.Enity.TmdbBook
-import com.example.bkn.domain.Book
+import com.example.bkn.data.Enity.Book
 
 object Converter {
     fun convertApiListToDTOList(list: List<TmdbBook>?): List<Book> {
@@ -12,7 +12,6 @@ object Converter {
                     title = it.title,
                     poster = it.posterPath,
                     description = it.overview,
-                    rating = it.voteAverage,
                     isInFavorites = false
                 )
             )

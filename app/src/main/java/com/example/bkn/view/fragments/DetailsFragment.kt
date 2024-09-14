@@ -10,13 +10,13 @@ import com.bumptech.glide.Glide
 import com.example.bkn.R
 import com.example.bkn.data.ApiConstants
 import com.example.bkn.databinding.FragmentDetailsBinding
-import com.example.bkn.domain.Book
+import com.example.bkn.data.Enity.Book
 
 
 class DetailsFragment : Fragment(R.layout.fragment_details) {
     private lateinit var binding: FragmentDetailsBinding
 
-    private lateinit var Book: Book
+    private lateinit var book: Book
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,12 +31,12 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
         setBooksDetails()
 
         binding.detailsFabFavorites.setOnClickListener {
-            if (!Book.isInFavorites) {
+            if (!book.isInFavorites) {
                 binding.detailsFabFavorites.setImageResource(R.drawable.ic_baseline_favorite_24)
-                Book.isInFavorites = true
+                book.isInFavorites = true
             } else {
                 binding.detailsFabFavorites.setImageResource(R.drawable.ic_baseline_favorite_border_24)
-                Book.isInFavorites = false
+                book.isInFavorites = false
             }
         }
 
@@ -48,7 +48,7 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
             //Кладем данные о нашем фильме
             intent.putExtra(
                 Intent.EXTRA_TEXT,
-                "Check out this Book: ${Book.title} \n\n ${Book.description}"
+                "Check out this Book: ${book.title} \n\n ${book.description}"
             )
             //УКазываем MIME тип, чтобы система знала, какое приложения предложить
             intent.type = "text/plain"
@@ -58,21 +58,21 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
     }
 
     private fun setBooksDetails() {
-        //Получаем наш фильм из переданного бандлацц
-        Book = arguments?.get("Book") as Book
+        //Получаем нашу книгу из переданного бандлацц
+        book = arguments?.get("Book") as Book
 
         //Устанавливаем заголовок
-        binding.detailsToolbar.title = Book.title
+        binding.detailsToolbar.title = book.title
         //Устанавливаем картинку
         Glide.with(this)
-            .load(ApiConstants.IMAGES_URL + "w780" + Book.poster)
+            .load(ApiConstants.IMAGES_URL + "w780" + book.poster)
             .centerCrop()
             .into(binding.detailsPoster)
         //Устанавливаем описание
-        binding.detailsDescription.text = Book.description
+        binding.detailsDescription.text = book.description
 
         binding.detailsFabFavorites.setImageResource(
-            if (Book.isInFavorites) R.drawable.ic_baseline_favorite_24
+            if (book.isInFavorites) R.drawable.ic_baseline_favorite_24
             else R.drawable.ic_baseline_favorite_border_24
         )
     }

@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bkn.databinding.BookItemBinding
-import com.example.bkn.domain.Book
+import com.example.bkn.data.Enity.Book
 import com.example.bkn.view.rv_viewholders.BookViewHolder
 
 
@@ -14,7 +14,7 @@ import com.example.bkn.view.rv_viewholders.BookViewHolder
 class BookListRecyclerAdapter(private val clickListener: OnItemClickListener) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     //Здесь у нас хранится список элементов для RV
-    private val items = mutableListOf<Book>()
+    val items = mutableListOf<Book>()
 
     //Этот метод нужно переопределить на возврат количества елементов в списке RV
     override fun getItemCount() = items.size
@@ -64,6 +64,6 @@ class BookListRecyclerAdapter(private val clickListener: OnItemClickListener) :
 
     //Интерфейс для обработки кликов
     interface OnItemClickListener {
-        fun click(Book: Book)
+        fun click(book: Book)
     }
 }
