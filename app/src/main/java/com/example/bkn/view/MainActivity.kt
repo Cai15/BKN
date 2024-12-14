@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.bkn.R
 import com.example.bkn.databinding.ActivityMainBinding
-import com.example.bkn.domain.Book
+import com.example.bkn.data.Enity.Book
 import com.example.bkn.view.fragments.DetailsFragment
 import com.example.bkn.view.fragments.FavoritesFragment
 import com.example.bkn.view.fragments.HomeFragment
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     fun launchDetailsFragment(Book: Book) {
         //Создаем "посылку"
         val bundle = Bundle()
-        //Кладем наш фильм в "посылку"
+        //Кладем нашу книгу в "посылку"
         bundle.putParcelable("Book", Book)
         //Кладем фрагмент с деталями в перменную
         val fragment = DetailsFragment()
@@ -53,6 +53,7 @@ class MainActivity : AppCompatActivity() {
             .commit()
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         if (supportFragmentManager.backStackEntryCount == 1) {
             if (backPressed + TIME_INTERVAL > System.currentTimeMillis()) {

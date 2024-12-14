@@ -12,7 +12,7 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    property().set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
@@ -21,3 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "BKN"
 include(":app")
+
+fun DependencyResolutionManagement.property() =
+    repositoriesMode
